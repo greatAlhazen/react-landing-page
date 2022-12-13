@@ -9,6 +9,11 @@ import CloseIcon from '@mui/icons-material/Close';
 
 const Container = styled.div`
   height: 7rem;
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1001;
 `;
 
 const Wrapper = styled.div`
@@ -31,7 +36,7 @@ const Image = styled.img`
 
 const Title = styled.h1`
   font-size: 2.5rem;
-  color: #301008;
+  color: #f4d8ae;
 `;
 
 const List = styled.ul`
@@ -50,14 +55,16 @@ const List = styled.ul`
     justify-content:center;
     background-color:#d85c27;
     gap:3rem;
-    display: ${(props) => props.responsive ? "flex" : "none"}
+    display: ${(props) => props.responsive ? "flex" : "none"};
+
   }
 `;
 
 const ListItem = styled.li``;
 
 const Button = styled.a`
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: #f4d8ae;
   cursor: pointer;
   background-image: linear-gradient(
     130deg,
@@ -103,8 +110,11 @@ const Menu = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  ${mediumScreen({ display: "flex" })}
+  ${mediumScreen({ display: "flex" })};
+
+
 `;
+
 
 const Navbar = () => {
     const [responsive,setResponsive] = useState(false);
