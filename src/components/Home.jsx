@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { mediumScreen } from "../responsive";
+import { mediumScreen, button} from "../responsive";
 
 const Container = styled.section`
     height:100vh;
@@ -24,38 +24,30 @@ const Title =styled.h1`
 `
 
 const Button = styled.button`
-  border:none;
-  outline:none;
-  width:19rem;
-  height:4rem;
-  border:2px solid #f4d8ae;
-  background-color:transparent;
-  color: #f4d8ae;
-  cursor:pointer;
-  font-size:2rem;
-  position:relative;
+${button({ 
+  width:"19rem",
+})}
 
-  &::before{
-    content:'Best Place';
-    top:0;
-    left:-100%;
-    position:absolute;
-    width:100%;
-    height:100%;
-    background-color:#301008;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#f4d8ae;
-    opacity:0;
-    transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
-  }
+&::before{
+  content:'Best Place';
+  top:0;
+  left:-100%;
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color:#301008;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#f4d8ae;
+  opacity:0;
+  transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}
 
-
-  &:hover::before{
-    opacity:1;
-    left:0;
-  }
+&:hover::before{
+  opacity:1;
+  left:0;
+}
 `
 
 const Images = styled.div`
