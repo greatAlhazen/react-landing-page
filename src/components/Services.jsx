@@ -25,7 +25,6 @@ const Wrapper = styled.div`
 const Card = styled.div`
   background-color: ${(props) => props.color};
   width:33rem;
-  height:26rem;
   display:flex;
   flex-direction:column;
   align-items:center;

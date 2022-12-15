@@ -41,5 +41,6 @@ export const heading = (props) =>{
   color:transparent;
   margin-bottom: 2rem;
   transtion:.6s all;
+  cursor:pointer;
   `
 }
