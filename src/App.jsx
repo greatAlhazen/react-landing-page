@@ -4,16 +4,18 @@ import Services from './components/Services';
 import About from './components/About';
 import Plans from './components/Plans';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
     <>
-    <Navbar/>
-    <Home/>
+    <Navbar />
+    <Home />
     <Services/>
     <About/>
-    <Plans/>
-    <Contact/>
+    <Plans />
+    <Contact />
+    <Footer/>
     </>
   );
 };

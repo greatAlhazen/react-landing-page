@@ -132,7 +132,7 @@ const DeatilTitle = styled.h4`
 
 const Contact = () => {
   return (
-    <Container>
+    <Container id='contact'>
         <Heading>Contact Us</Heading>
         <Wrapper>
             <Form>

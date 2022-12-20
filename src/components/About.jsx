@@ -128,7 +128,7 @@ const Image = styled.img`
 
 const About = () => {
   return (
-    <Container>
+    <Container id='about'>
         <Heading>About Us</Heading>
         <Wrapper>
         <Content>

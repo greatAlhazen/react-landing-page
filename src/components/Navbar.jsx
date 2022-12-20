@@ -14,6 +14,7 @@ const Container = styled.div`
   top:0;
   left:0;
   z-index:1001;
+  background: ${(props) => props.bg}
 `;
 
 const Wrapper = styled.div`
@@ -27,6 +28,7 @@ const Logo = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  cursor:pointer;
 `;
 
 const Image = styled.img`
@@ -36,7 +38,7 @@ const Image = styled.img`
 
 const Title = styled.h1`
   font-size: 2.5rem;
-  color: #f4d8ae;
+  color: ${(props) => props.color} ;
 `;
 
 const List = styled.ul`
@@ -64,7 +66,7 @@ const ListItem = styled.li``;
 
 const Button = styled.a`
   font-size: 2.5rem;
-  color: #f4d8ae;
+  color: ${(props) => props.color};
   cursor: pointer;
   background-image: linear-gradient(
     130deg,
@@ -102,48 +104,59 @@ const Menu = styled.div`
   position: absolute;
   top: 7rem;
   right: 0.5rem;
-  background-color: #fff;
+  background-color:${(props) => props.color} ;
   border-radius: 50%;
-  color: #301008;
+  color: #000;
   font-size: 3rem;
   display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   ${mediumScreen({ display: "flex" })};
-
-
 `;
 
 
 const Navbar = () => {
     const [responsive,setResponsive] = useState(false);
+    const [sliding , setSliding] = useState('transparent');
+    const [linkColor , setLinkColor] = useState('#f4d8ae');
+
     const handleResponsive = () =>{
         setResponsive(!responsive);
     }
 
+    window.addEventListener('scroll',function(){
+      if(window.scrollY > 30){
+        setSliding('#f4d8ae');
+        setLinkColor('#301008');
+      }else{
+        setSliding('transparent');
+        setLinkColor('#f4d8ae');
+      }
+    })
+
   return (
-    <Container>
+    <Container bg={sliding}>
       <Wrapper>
         <Logo>
           <Image src="/images/logo.png" />
-          <Title>FitNesss</Title>
+          <Title color={linkColor} >FitNesss</Title>
         </Logo>
         <List responsive={responsive}>
           <ListItem>
-            <Button href="#home">Home</Button>
+            <Button color={linkColor}  href="#home">Home</Button>
           </ListItem>
           <ListItem>
-            <Button href="#about">About</Button>
+            <Button color={linkColor}  href="#about">About</Button>
           </ListItem>
           <ListItem>
-            <Button href="#services">Services</Button>
+            <Button color={linkColor} href="#services">Services</Button>
           </ListItem>
           <ListItem>
-            <Button href="#pricing">Pricing</Button>
+            <Button color={linkColor} href="#pricing">Pricing</Button>
           </ListItem>
           <ListItem>
-            <Button href="#contact">Contact</Button>
+            <Button color={linkColor} href="#contact">Contact</Button>
           </ListItem>
         </List>
         <Links>
@@ -159,7 +172,7 @@ const Navbar = () => {
           <LinkItem></LinkItem>
         </Links>
       </Wrapper>
-      <Menu onClick={handleResponsive}>
+      <Menu color={linkColor} onClick={handleResponsive}>
        {!responsive ? <MenuIcon color="inherit" fontSize="inherit" /> :
        <CloseIcon color="inherit" fontSize="inherit" />
        } 

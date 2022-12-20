@@ -80,7 +80,7 @@ const Home = () => {
   }
 
   return (
-    <Container image={image}>
+    <Container image={image} id="home">
       <Title>It's Your Workout, Your Time, Your Body, Own It.</Title>
       <Button>Workout With Us</Button>
       <Images>

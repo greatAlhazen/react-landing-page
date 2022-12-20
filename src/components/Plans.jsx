@@ -91,7 +91,7 @@ const Button = styled.button`
 
 const plans = () => {
   return (
-    <Container>
+    <Container id='pricing'>
         <Heading>Choose Best Plan</Heading>
         <Wrapper>
             <Card>

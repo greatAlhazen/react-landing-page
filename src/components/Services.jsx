@@ -25,6 +25,7 @@ const Wrapper = styled.div`
 const Card = styled.div`
   background-color: ${(props) => props.color};
   width:33rem;
+  height:38rem;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -62,25 +63,34 @@ ${button({
 
 const Services = () => {
   return (
-    <Container>
+    <Container id="services">
         <Heading>Our Services</Heading>
         <Wrapper>
             <Card color='#b999be'>
             <Image src="/images/personal.png"/>
             <Title>Personal Training</Title>
-            <Desc>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</Desc>
+            <Desc>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </Desc>
             <Button color='#14365d'>Try Now</Button>
             </Card>
             <Card color='#14365d'>
             <Image src="/images/group.png"/>
             <Title>Group Training</Title>
-            <Desc>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </Desc>
+            <Desc>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </Desc>
             <Button color='#dc7027'>Try Now</Button>
             </Card>
             <Card color='#dc7027'>
             <Image src="/images/telephone.png"/>
             <Title>7/24 Contact</Title>
-            <Desc>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </Desc>
+            <Desc>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </Desc>
             <Button color='#b999be'>Try Now</Button>
             </Card>
         </Wrapper>
